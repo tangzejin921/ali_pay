@@ -21,6 +21,12 @@ allprojects {
         jcenter()
     }
 }
+rootProject.extensions.add("ali_pay",Type.isModule.name())
+enum Type{
+    isAPP,
+    isModule,
+    isFlutterPlugin;
+}
 project.ext {
     ext._compileSdkVersion = 27
     ext._buildToolsVersion = '27.0.3'
