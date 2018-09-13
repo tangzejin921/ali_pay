@@ -6,9 +6,9 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
-import com.jkwy.ali.pay.PayResult;
-import com.jkwy.ali.pay.R;
-import com.jkwy.ali.pay.UtilAlipay;
+import com.tzj.ali.pay.R;
+import com.tzj.ali.pay.PayResult;
+import com.tzj.ali.pay.UtilAlipay;
 
 
 public class ModuleActivity extends Activity implements View.OnClickListener{
