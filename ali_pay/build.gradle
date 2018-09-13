@@ -19,7 +19,7 @@ android {
         minSdkVersion _minSdkVersion
         targetSdkVersion _targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "18.06.01"//这个是alipaySdk的版本
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [ moduleName : project.getName() ]
