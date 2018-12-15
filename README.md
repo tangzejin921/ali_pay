@@ -24,7 +24,7 @@ flutter 调用 alipay
 - pub 加入
     ```pub
     dev_dependencies:
-      android_intent:
+      ali_pay:
         git:
           url: git://github.com/tzjandroid/ali_pay.git
           path: ali_pay/src/flutter
