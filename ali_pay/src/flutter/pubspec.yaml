@@ -3,6 +3,9 @@ description: 阿里支付 flutter_plugin
 version: 0.0.1
 author: tangzejin921@qq.com
 homepage:
+# 这个不加会导致报错 Because xxx depends on xxx from path which requires SDK ">=2.0.0-dev.68.0 <3.0.0", version solving failed.
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
 
 dependencies:
   flutter:

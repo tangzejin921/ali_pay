@@ -1,4 +1,4 @@
-import 'package:ali_pay/aliPay.dart';
+import 'package:ali_pay/ali_pay.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
