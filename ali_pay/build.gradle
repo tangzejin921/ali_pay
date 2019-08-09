@@ -75,7 +75,8 @@ android {
 }
 
 dependencies {
-    implementation(name:"alipaySdk-15.6.5-20190718211159-noUtdid")
+    //这里要用files 引入，不然aar不会被放的 aar里
+    implementation files("libs/alipaySdk-15.6.5-20190718211159-noUtdid.aar")
 }
 //删除文件
 def deleteFiles() {
