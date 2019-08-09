@@ -75,5 +75,33 @@ android {
 }
 
 dependencies {
-    implementation(name:"alipaySdk-15.6.5-20190718211159-noUtdid",ext:"aar")
+    implementation(name:"alipaySdk-15.6.5-20190718211159-noUtdid")
+}
+//删除文件
+def deleteFiles() {
+    def files = fileTree("${buildDir}/intermediates") {
+        include "**/R.txt"
+        include '**/BuildConfig.class'
+    }
+    files.each { it.delete() }
+}
+//import com.android.build.gradle.internal.pipeline.TransformTask
+//这个有点问题
+//task removeClass(type: Jar) {
+//    from "$buildDir/intermediates/javac/"
+//    exclude '**/BuildConfig.class'
+//    exclude '**/R.class'
+//    exclude '**/R$*.class'
+//}
+//tasks.withType(TransformTask) { pkgTask ->
+//    pkgTask.doFirst { deleteFiles() }
+//}
+afterEvaluate { Project project ->
+    tasks.matching {
+        it.name.endsWith('WithJavac')
+    }.each {Task tk ->
+        tk.doLast {
+            deleteFiles()
+        }
+    }
 }
